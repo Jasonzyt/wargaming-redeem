@@ -46,8 +46,6 @@ IOWANAVALLEGENDS
 const codes = list.split("\n").filter((x) => x.length > 0)
 const input = document.querySelector("input[data-qa='redeem_code_input']")
 const btn = document.querySelector("button[data-qa='redeem_code_button']")
-const randTime = Math.random() * 10000;
-let count = 0;
 
 const delay = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -55,7 +53,6 @@ const delay = (ms) => {
 
 const createInputEvent = (v) => {
   return new InputEvent('input', {
-    isTrusted: true,
     bubbles: true,
     cancelBubble: true,
     cancelable: true,
@@ -72,7 +69,7 @@ const createInputEvent = (v) => {
     sourceCapabilities: null,
     srcElement: input,
     target: input,
-    timeStamp: randTime + (count++ * 1000) + Math.random(),
+    timeStamp: 114514.1919810,
     type: 'input',
     view: null,
     which: 0
